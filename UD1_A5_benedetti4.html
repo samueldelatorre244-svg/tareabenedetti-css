@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mario Benedetti</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 16px;
+            color: #333;
+            background-color: #778899;
+            margin: 0;
+            padding: 20px 10px;
+        }
+
+        .contenedor {
+            max-width: 950px;
+            margin: 0 auto;
+            background-color: #FFFFE0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        header {
+            background-color: #FAEBD7;
+            padding: 15px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+            color: #333;
+        }
+
+        header img {
+            height: 60px;
+            width: auto;
+            display: block;
+        }
+
+        nav {
+            background-color: #323232;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav li {
+            padding: 10px 25px;
+        }
+
+        nav a {
+            color: #FFFFFF;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #D2D3D4;
+        }
+
+        main {
+            padding: 20px 25px 30px;
+        }
+
+        #quien-es p {
+            text-align: justify;
+            line-height: 1.5;
+            margin-top: 0;
+        }
+
+        h2 {
+            color: #A0A0A0;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+            border-bottom: 1px solid #d9d9d9;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+
+        .grid-libros {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .libro {
+            width: 25%;
+            padding: 0 15px;
+            border-right: 1px solid #d9d9d9;
+        }
+
+        .libro:first-child {
+            padding-left: 0;
+        }
+
+        .libro:last-child {
+            border-right: none;
+            padding-right: 0;
+        }
+
+        .libro h3 {
+            margin-top: 5px;
+            font-size: 1.1em;
+        }
+
+        .libro p {
+            text-align: justify;
+            font-size: 0.92em;
+            line-height: 1.45;
+        }
+
+        #frases ol {
+            padding-left: 20px;
+            line-height: 1.6;
+        }
+
+        footer {
+            max-width: 950px;
+            margin: 8px auto 0;
+            padding-left: 25px;
+            color: #efefef;
+            font-style: italic;
+            font-size: 0.8em;
+        }
+
+        @media (max-width: 768px) {
+            nav a {
+                font-size: 90%;
+            }
+
+            .libro {
+                width: 50%;
+                border-right: none;
+                border-bottom: 1px solid #d9d9d9;
+                padding: 15px 0;
+            }
+
+            .libro:nth-child(odd) {
+                padding-right: 15px;
+            }
+
+            .libro:nth-child(even) {
+                padding-left: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 0;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav li {
+                border-bottom: 1px solid #555;
+                padding: 10px 15px;
+            }
+
+            nav li:last-child {
+                border-bottom: none;
+            }
+
+            .libro {
+                width: 100%;
+                padding: 15px 0;
+            }
+
+            .libro:nth-child(odd),
+            .libro:nth-child(even) {
+                padding-left: 0;
+                padding-right: 0;
+            }
+
+            footer {
+                background-color: #778899;
+                padding: 10px 15px;
+                margin-top: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <header>
+            <h1>Mario Benedetti</h1>
+            <img src="imagenes/Benedetti.jpg" alt="Mario Benedetti">
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="#quien-es">Quién es</a></li>
+                <li><a href="#libros">Libros</a></li>
+                <li><a href="#frases">Frases</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section id="quien-es">
+                <p>Mario Benedetti, excelente escritor, novelista y periodista que centró su carrera en la literatura y se convirtió en el personaje más importante para su país Uruguay, con una gran producción literaria, en la segunda mitad del siglo XX.</p>
+                <p>Desarrolló varias facetas y se convirtió en un personaje de gran relevancia, que realizo trabajos como novelista, dramaturgo, cuentista, critico, periodista y el más fundamental, un excelente escritor.</p>
+            </section>
+
+            <section id="libros">
+                <h2>Libros</h2>
+                <div class="grid-libros">
+                    <article class="libro">
+                        <h3>La Tregua</h3>
+                        <p>Este libro refleja el espíritu romántico y filosófico del autor. Está escrita como si fuera el diario del protagonista, Martín Santomé, y retrata la vida de un empleado a punto jubilarse, viudo, en el Montevideo de finales de los 50.</p>
+                    </article>
+
+                    <article class="libro">
+                        <h3>Vivir adrede</h3>
+                        <p>Todo es adrede, todo hace trizas el alma. ¿Nos traicionan nuestras propias huellas? ¿Qué diferencia hay entre un suicida inevitable y uno vocacional? A través de planteamientos como éstos, Vivir adrede reflexiona sobre la vida.</p>
+                    </article>
+
+                    <article class="libro">
+                        <h3>Gracias por el fuego</h3>
+                        <p>Pieza fundamental de la narrativa de Mario Benedetti, GRACIAS POR EL FUEGO novela una historia de frustraciones: la frustración de un asesinato y una frustración personal que es a la vez reflejo de la frustración general en que se mueve un país.</p>
+                    </article>
+
+                    <article class="libro">
+                        <h3>El amor, las mujeres y la vida</h3>
+                        <p>Este libro reúne los mejores poemas de amor de Mario Benedetti. Muchos de ellos están a flor de labio en la gente, que los recuerda de memoria o los tiene en mente a la hora de garabetear un verso; otros se han convertido en canciones y hasta en graffittis.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section id="frases">
+                <h2>Frases</h2>
+                <ol>
+                    <li>Cuando creíamos que teníamos todas las respuestas, de pronto, cambiaron todas las preguntas</li>
+                    <li>La mariposa recordará por siempre que fue gusano</li>
+                    <li>Después de todo, la muerte es solo un síntoma de que hubo vida</li>
+                    <li>Hay pocas cosas tan ensordecedoras como el silencio</li>
+                    <li>La incertidumbre es una margarita cuyos pétalos no se terminan jamás de deshojar</li>
+                </ol>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        ©2018 _ Trabajo de "Samuel de la Torre"
+    </footer>
+</body>
+</html>
